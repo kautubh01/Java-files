@@ -1,1 +1,69 @@
+interface MyPhone {
+    void camera();
+    void snapshot();
+    void picture();
+}
+
+interface SmartPhone {
+    void fingerprint();
+    void camera4k();
+    void hdcamera();
+    void smartsensors();
+}
+
+class Gallery {
+    void gallery() {
+        System.out.println("My gallery has various images");
+    }
+}
+
+class IPhone extends Gallery implements MyPhone, SmartPhone {
+    @Override
+    public void camera() {
+        System.out.println("Ultra quality of video recording");
+    }
+
+    @Override
+    public void snapshot() {
+        System.out.println("Snap is very nice");
+    }
+
+    @Override
+    public void picture() {
+        System.out.println("Picture quality is improved");
+    }
+
+    @Override
+    public void fingerprint() {
+        System.out.println("Smart security");
+    }
+
+    @Override
+    public void camera4k() {
+        System.out.println("Ultra pro quality");
+    }
+
+    @Override
+    public void hdcamera() {
+        System.out.println("Camera is in HD");
+    }
+
+    @Override
+    public void smartsensors() {
+        System.out.println("Smart sensoring system");
+    }
+}
+
+public class InterfaceAndDefault {
+    public static void main(String[] args) {
+        IPhone io = new IPhone();
+        io.camera();
+        io.snapshot();
+        io.picture();
+        io.fingerprint();
+        io.hdcamera();
+        io.smartsensors();
+        io.gallery();
+    }
+}
 
