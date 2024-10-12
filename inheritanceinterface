@@ -1,0 +1,37 @@
+interface class{
+   void meth1();
+   void meth2();
+}
+interface class2 extends class(
+    void meth3();
+    void meth4();
+)
+class class3 implements class2{
+    void meth1(){
+        System.out.println("this is method 1");
+    }
+    void meth2(){
+        System.out.println("this is method 2");
+    }
+    void meth3(){
+        System.out.println("this is method 3");
+    }
+    void meth4(){
+        System.out.println("this is method 4");
+    }
+}
+
+
+
+public class InheritanceInterface {
+    
+    public static void main(String[] args) {
+        class3 classses = new class3();
+        classes.meth1();
+        classes.meth2();
+        classes.meth3();
+        classes.meth4();
+
+    }
+    
+}
